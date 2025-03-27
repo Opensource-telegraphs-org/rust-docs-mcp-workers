@@ -1,0 +1,18 @@
+[package]
+name = "rust-docs-mcp-server"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.4"        # HTTP 服务器框架
+serde = { version = "1.0", features = ["derive"] }  # JSON 序列化/反序列化
+serde_json = "1.0"       # JSON 处理
+reqwest = { version = "0.11", features = ["json"] }  # HTTP 客户端
+tokio = { version = "1.0", features = ["full"] }    # 异步运行时
+scraper = "0.17"         # HTML 解析
+log = "0.4"              # 日志
+env_logger = "0.10"      # 日志实现
+dotenvy = "0.15"           # 环境变量
+tracing = "0.1"          # 核心 tracing 框架
+tracing-subscriber = "0.3"  # 提供日志格式化和输出
+

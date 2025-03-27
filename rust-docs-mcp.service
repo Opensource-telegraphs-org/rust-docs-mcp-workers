@@ -1,0 +1,14 @@
+[Unit]
+Description=Rust Docs MCP Server
+After=network.target
+
+[Service]
+Type=simple
+User=m23
+WorkingDirectory=/home/m23/.cargo/bin
+ExecStart=/home/m23/.cargo/bin/rust-docs-mcp-server -p 7777
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
